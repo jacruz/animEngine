@@ -1,0 +1,491 @@
+{
+	"name":"novena",
+	"user":"jacruz",
+	"dateCreated":"2017-08-12",
+	"lastUpdate":"2023-12-15",
+	"type":"EnumProjectType.STORY",
+	"audios":[
+		{
+			"id" : "0000999999998888887",
+			"params": {
+				"src":"audio/Dave_Girtsman.mp3",
+				"loop":false,
+				"volume":0.5
+			},
+			"triggers":[
+				{
+					"type":"EnumAudiosTrigger.ON_START_SPECIFIC_SCENE",
+					"params":{
+						"idScene" : "0000000000000000011119999111111"
+					}
+				},
+				{
+					"type":"EnumAudiosTrigger.ON_ANIMATION_START",
+					"params":{
+						"idAnimation" : "345345345345345"
+					}
+				},
+				{
+					"type":"EnumAudiosTrigger.ON_ANIMATION_FINISH",
+					"params":{
+						"idAnimation" : "456456456555546"
+					}
+				}
+			]
+		}
+	],
+	"scenes":[
+		{
+			"id":"0000000000000000011119999111111",
+			"numScene":0,
+			"objects" : [
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":0,
+					"yDef":0,
+					"wDef":40,
+					"hDef":20,
+					"degrees":0,
+					"alpha":0.2,
+					"imageSrc":"img/novena/natividad.png",
+					"animations" : [
+						{
+							"id" : "1321231234123", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":50,
+								"toY":50,
+								"duration":1500,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								}
+							]
+						},
+						{
+							"id" : "456456456555546", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":1000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"1321231234123"
+									}
+								}
+							]
+						},
+						{
+							"id" : "234234234234", 
+							"type": "EnumAnimationsTypes.SCALE",
+							"params": {
+								"toW":10,
+								"toH":10,
+								"duration":2000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"456456456555546"
+									}
+								}
+							]
+						},
+						{
+							"id" : "345345345345345", 
+							"type": "EnumAnimationsTypes.ROTATE",
+							"params": {
+								"clockWise":false,
+								"toDegrees":180,
+								"duration":1000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"234234234234"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						{
+							"id": "1101010102",
+							"type": "EnumClicEventTypes.ON_CLIC_NEXT_SCENE",
+							"params":{
+								
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":50,
+					"yDef":80,
+					"wDef":40,
+					"hDef":20,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/novena/test.gif",
+					"animations" : [
+						{
+							
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":10,
+					"yDef":30,
+					"wDef":10,
+					"hDef":6,
+					"degrees":0,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "yellow",
+					"strokeColor" : "blue",
+					"lineWidth": 5,
+					"animations" : [
+						{
+							
+						}
+					],
+					"onClic":[
+						{
+							"id": "99999999989898",
+							"type": "EnumClicEventTypes.ON_CLIC_INI_FULL_SCREEN",
+							"params":{
+								
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":30,
+					"yDef":30,
+					"wDef":10,
+					"hDef":6,
+					"degrees":0,
+					"alpha":0,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "green",
+					"strokeColor" : "black",
+					"lineWidth": 5,
+					"animations" : [
+						{
+							"id" : "000000345345345", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":2000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_CLIC",
+									"params":{
+										
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						{
+							"id": "01919102103749",
+							"type": "EnumClicEventTypes.ON_CLIC_START_ANIMATION",
+							"params":{
+								"idAnimation" : "000000345345345"
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":10,
+					"yDef":70,
+					"wDef":10,
+					"hDef":20,
+					"degrees":0,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "red",
+					"strokeColor" : "blue",
+					"lineWidth": 0,
+					"animations" : [
+						{
+							
+						}
+					],
+					"onClic":[
+						{
+							"id": "99999999989898",
+							"type": "EnumClicEventTypes.ON_CLIC_END_FULL_SCREEN",
+							"params":{
+								
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":50,
+					"yDef":10,
+					"degrees":0,
+					"alpha":0.2,
+					"objectType": "EnumObjectTypes.TEXT",
+					"fillColor": "red",
+					"strokeColor" : "black",
+					"lineWidth": 2,
+					"text": "animEngine is Alive!",
+					"fontSize": 6,
+					"fontFamily": "sans-serif",
+					"textAlign": "left",
+					"animations" : [
+						{
+							"id" : "88888888888888888", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":50,
+								"toY":10,
+								"duration":2000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								}
+							]
+						},
+						{
+							"id" : "4444444444444444444444444", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":1000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"1321231234123"
+									}
+								}
+							]
+						},
+						{
+							"id" : "55555555555555555555", 
+							"type": "EnumAnimationsTypes.SCALE",
+							"params": {
+								"toFontSize":10,
+								"duration":2000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"456456456555546"
+									}
+								}
+							]
+						},
+						{
+							"id" : "9999999999999999999999999999", 
+							"type": "EnumAnimationsTypes.ROTATE",
+							"params": {
+								"clockWise":true,
+								"toDegrees":90,
+								"duration":2000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"234234234234"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				}
+			]
+		},
+		{
+			"id":"0000000000000000011119999111111",
+			"numScene":1,
+			"objects" : [
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":40,
+					"yDef":20,
+					"wDef":10,
+					"hDef":10,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "black",		
+					"animations" : [
+						{
+							"id" : "89089066668909808", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":90,
+								"toY":10,
+								"duration":1000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_CLIC",
+									"params":{
+										
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						{
+							"id": "110101066101",
+							"type": "EnumClicEventTypes.ON_CLIC_PREVIEW_SCENE",
+							"params":{
+								
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":40,
+					"yDef":40,
+					"wDef":10,
+					"hDef":10,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "blue",		
+					"animations" : [
+						{
+							"id" : "0000001010101010101010", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":50,
+								"toY":50,
+								"duration":1000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_CLIC",
+									"params":{
+										
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						{
+							"id": "110101066102",
+							"type": "EnumClicEventTypes.ON_CLIC_START_ANIMATION",
+							"params":{
+								"idAnimation" : "0000001010101010101010"
+							}
+						},
+						{
+							"id": "9090909090909090909",
+							"type": "EnumClicEventTypes.ON_CLIC_START_AUDIO",
+							"params":{
+								"idAudio" : "0000999999998888887"
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":80,
+					"yDef":10,
+					"wDef":10,
+					"hDef":10,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "red",
+					"strokeColor" : "black",
+					"lineWidth": 5,
+					"animations" : [
+						{
+							"id" : "111111111111112222222222223333333", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":10,
+								"toY":80,
+								"duration":2000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_CLIC",
+									"params":{
+										
+									}
+								},
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"44444444444445555555555556666666666"
+									}
+								}
+							]
+						},
+						{
+							"id" : "44444444444445555555555556666666666", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":80,
+								"toY":10,
+								"duration":2000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"111111111111112222222222223333333"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						{
+							"id": "110101066102",
+							"type": "EnumClicEventTypes.ON_CLIC_START_ANIMATION",
+							"params":{
+								"idAnimation" : "111111111111112222222222223333333"
+							}
+						}
+					]
+				}
+
+			]
+		}
+	]
+}

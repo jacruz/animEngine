@@ -1,0 +1,880 @@
+{
+	"name":"comic_1",
+	"user":"jacruz",
+	"dateCreated":"2023-12-18",
+	"lastUpdate":"2023-12-20",
+	"type":"EnumProjectType.STORY",
+	"audios":[
+		{
+			"id" : "au001",
+			"params": {
+				"src":"audio/thunder.mp3",
+				"loop":false,
+				"volume":0.5
+			},
+			"triggers":[
+				{
+					"type":"EnumAudiosTrigger.ON_ANIMATION_START",
+					"params":{
+						"idAnimation" : "a011"
+					}
+				}
+			]
+		}
+	],
+	"scenes":[
+		{
+			"id":"s000",
+			"numScene":0,
+			"objects" : [
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":50,
+					"yDef":50,
+					"wDef":40,
+					"hDef":8,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "yellow",		
+					"animations" : [
+						
+					],
+					"onClic":[
+						{
+							"id": "c004",
+							"type": "EnumClicEventTypes.ON_CLIC_NEXT_SCENE",
+							"params":{
+								
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":50,
+					"yDef":50,
+					"degrees":0,
+					"alpha":1,
+					"objectType": "EnumObjectTypes.TEXT",
+					"fillColor": "black",
+					"strokeColor" : "gray",
+					"lineWidth": 1,
+					"text": "start!",
+					"fontSize": 7,
+					"fontFamily": "Bangers",
+					"textAlign": "left",
+					"animations" : [
+
+					],
+					"onClic":[
+						{
+							"id": "c005",
+							"type": "EnumClicEventTypes.ON_CLIC_NEXT_SCENE",
+							"params":{
+								
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":93,
+					"yDef":4,
+					"wDef":8,
+					"hDef":4,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/fullscreen.png",
+					"animations" : [
+						
+					],
+					"onClic":[
+						{
+							"id": "c003",
+							"type": "EnumClicEventTypes.ON_CLIC_TOOGLE_FULL_SCREEN",
+							"params":{
+								
+							}
+						}
+					]
+				}
+				
+			]
+		},
+		{
+			"id":"s001",
+			"numScene":1,
+			"objects" : [
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":50,
+					"yDef":50,
+					"wDef":100,
+					"hDef":100,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/bkg.png",
+					"animations" : [
+						{
+							"id" : "a011", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":0,
+								"duration":100,
+								"delay":5000
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								},
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a014"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a012", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":100,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a011"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a013", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":0,
+								"duration":100,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a012"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a014", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":500,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a013"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":20,
+					"yDef":8,
+					"wDef":20,
+					"hDef":10,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/bkg_moon.png",
+					"animations" : [
+						
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":50,
+					"yDef":25,
+					"wDef":100,
+					"hDef":50,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/bkg_stars.png",
+					"animations" : [
+						{
+							"id" : "a001", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":0.1,
+								"duration":1000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								},
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a002"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a002", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":500,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a001"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":75,
+					"yDef":55,
+					"wDef":150,
+					"hDef":55,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/bkg_mountains.png",
+					"animations" : [
+						{
+							"id" : "a003", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":50,
+								"toY":55,
+								"duration":4000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":65,
+					"yDef":55,
+					"wDef":100,
+					"hDef":55,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/bkg_trees.png",
+					"animations" : [
+						{
+							"id" : "a004", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":85,
+								"toY":55,
+								"duration":4000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":0,
+					"yDef":50,
+					"wDef":200,
+					"hDef":100,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/bkg_siluette_black.png",
+					"animations" : [
+						{
+							"id" : "a005", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":100,
+								"toY":50,
+								"duration":4000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":-60,
+					"yDef":59,
+					"wDef":30,
+					"hDef":10,
+					"degrees":20,
+					"alpha":1,
+					"imageSrc":"img/hero_kid_cape.png",
+					"animations" : [
+						{
+							"id" : "a006", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":40,
+								"toY":59,
+								"duration":4000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								}
+							]
+						},
+						{
+							"id" : "a007", 
+							"type": "EnumAnimationsTypes.ROTATE",
+							"params": {
+								"clockWise":false,
+								"degreesPSec":10,
+								"duration":300,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								},
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a008"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a008", 
+							"type": "EnumAnimationsTypes.ROTATE",
+							"params": {
+								"clockWise":true,
+								"degreesPSec":10,
+								"duration":300,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a007"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a018", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":0,
+								"duration":100,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a011"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a019", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":500,
+								"delay":500
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a018"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":-60,
+					"yDef":58,
+					"wDef":25,
+					"hDef":18,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/hero_kid.png",
+					"animations" : [
+						{
+							"id" : "a009", 
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":40,
+								"toY":58,
+								"duration":4000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								}
+							]
+						},
+						{
+							"id" : "a016", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":0,
+								"duration":100,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a011"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a017", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":500,
+								"delay":500
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a016"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":-33,
+					"yDef":50,
+					"wDef":90,
+					"hDef":35,
+					"degrees":0,
+					"alpha":0,
+					"imageSrc":"img/hero_man.png",
+					"animations" : [
+						{
+							"id" : "a010",
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":67,
+								"toY":50,
+								"duration":4000,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_START_SCENE",
+									"params":{
+										
+									}
+								}
+							]
+						},
+						{
+							"id" : "a015", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":100,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a011"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a016", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":0,
+								"duration":400,
+								"delay":500
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a015"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":50,
+					"yDef":90,
+					"wDef":15,
+					"hDef":6,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/bkg_bird.png",
+					"animations" : [
+						{
+							"id" : "a020",
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":110,
+								"toY":0,
+								"duration":800,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a011"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a021", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":0,
+								"duration":100,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a020"
+									}
+								}
+							]
+						},
+						{
+							"id" : "a022",
+							"type": "EnumAnimationsTypes.MOVE",
+							"params": {
+								"toX":50,
+								"toY":90,
+								"duration":100,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a021"
+									}
+								}
+							]
+						},{
+							"id" : "a023", 
+							"type": "EnumAnimationsTypes.ALPHA",
+							"params": {
+								"toAlpha":1,
+								"duration":100,
+								"delay":0
+							},
+							"triggers":[
+								{
+									"type":"EnumAnimationsTrigger.ON_ANIMATION_FINISH",
+									"params":{
+										"idAnimationTrigger":"a022"
+									}
+								}
+							]
+						}
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":50,
+					"yDef":90,
+					"wDef":100,
+					"hDef":20,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "yellow",		
+					"animations" : [
+						
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":125,
+					"yDef":83,
+					"degrees":0,
+					"alpha":1,
+					"objectType": "EnumObjectTypes.TEXT",
+					"fillColor": "black",
+					"strokeColor" : "gray",
+					"lineWidth": 1,
+					"text": "Es un guardián silencioso, \nun vigilante protector, \nun caballero de la noche...",
+					"fontSize": 8,
+					"fontFamily": "Bangers",
+					"textAlign": "left",
+					"animations" : [
+
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":90,
+					"yDef":96,
+					"degrees":0,
+					"alpha":1,
+					"objectType": "EnumObjectTypes.TEXT",
+					"fillColor": "black",
+					"strokeColor" : "transparent",
+					"lineWidth": 10,
+					"text": "> > >",
+					"fontSize": 8,
+					"fontFamily": "Bangers",
+					"textAlign": "center",
+					"animations" : [
+
+					],
+					"onClic":[
+						{
+							"id": "c001",
+							"type": "EnumClicEventTypes.ON_CLIC_NEXT_SCENE",
+							"params":{
+								
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":93,
+					"yDef":4,
+					"wDef":8,
+					"hDef":4,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/fullscreen.png",
+					"animations" : [
+						
+					],
+					"onClic":[
+						{
+							"id": "c003",
+							"type": "EnumClicEventTypes.ON_CLIC_TOOGLE_FULL_SCREEN",
+							"params":{
+								
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id":"s002",
+			"numScene":2,
+			"objects" : [
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":50,
+					"yDef":50,
+					"wDef":100,
+					"hDef":20,
+					"objectType": "EnumObjectTypes.RECT",
+					"fillColor": "yellow",		
+					"animations" : [
+						
+					],
+					"onClic":[
+						
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":50,
+					"yDef":47,
+					"degrees":0,
+					"alpha":1,
+					"objectType": "EnumObjectTypes.TEXT",
+					"fillColor": "black",
+					"strokeColor" : "gray",
+					"lineWidth": 1,
+					"text": "scene2: animEngine is alive!",
+					"fontSize": 7,
+					"fontFamily": "Bangers",
+					"textAlign": "left",
+					"animations" : [
+
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"xDef":20,
+					"yDef":55,
+					"degrees":0,
+					"alpha":1,
+					"objectType": "EnumObjectTypes.TEXT",
+					"fillColor": "black",
+					"strokeColor" : "transparent",
+					"lineWidth": 10,
+					"text": "< < <",
+					"fontSize": 8,
+					"fontFamily": "Bangers",
+					"textAlign": "center",
+					"animations" : [
+
+					],
+					"onClic":[
+						{
+							"id": "c002",
+							"type": "EnumClicEventTypes.ON_CLIC_PREVIEW_SCENE",
+							"params":{
+								
+							}
+						}
+					]
+				},
+				{
+					"objectClass":"EnumObjectClasses.INTERACTIVE_OBJECT",
+					"objectType": "EnumObjectTypes.IMAGE",
+					"xDef":93,
+					"yDef":4,
+					"wDef":8,
+					"hDef":4,
+					"degrees":0,
+					"alpha":1,
+					"imageSrc":"img/fullscreen.png",
+					"animations" : [
+						
+					],
+					"onClic":[
+						{
+							"id": "c003",
+							"type": "EnumClicEventTypes.ON_CLIC_TOOGLE_FULL_SCREEN",
+							"params":{
+								
+							}
+						}
+					]
+				}
+				
+			]
+		}
+	]
+}

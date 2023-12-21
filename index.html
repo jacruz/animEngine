@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<meta charset="UTF-8" />
+	<meta content='user-scalable=0' name='viewport' />
+	<meta name="mobile-web-app-capable" content="yes">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+		body{
+			background-color: white;
+		}
+		.container{
+			display: flex;
+			justify-content: center;
+		}
+		#c { 
+			background-color: rgba(42,35,49,0.4);
+		}
+	</style>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"/>
+	<script src="animEngine.js"></script>
+  </head>
+  <body>
+	<div class="container">
+		<canvas id="c">Por favor actualiza tu navegador para ver el contenido</canvas>
+	</div>
+	<script>
+		window.onload = function(e){
+			anim = new AnimEngine();//La referenciacion global de este objeto se hace en animEngine.js
+			anim.initialize("comic_1");
+		}
+	</script>
+  </body>
+</html>
