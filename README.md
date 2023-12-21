@@ -102,6 +102,8 @@ Existen variedad de funcionalidades y disparadores que se entremezclan haciendo 
 - Acualmente el archivo JSON debe escribirse a mano, pero debería construirse automáticamente con un editor de animación para este motor. Este editor sería de tipo drag-n-drop permitiendo la creación de las escenas, los objetos, animaciones, disparadores, audios y demás funcionalidades con su respectivo previsualizador.
 - Podría mejorarse la relación ancho-alto, ya que actualmente es fija de 393x851 por simple tamaño promedio de dispositivos móbiles en el mercado. Idealmente podría hacerse adaptable, sin embargo habría que ajustar la forma en que el sistema realiza el cálculo de tamaño de cada objeto.
 - Todas las animaciones ocurren en un canvas que es un elemento DOM dentro de un sitio web. Este sitio es básico pero podría estandarizarse y permitir personalización a nivel de colores, tipos de letra y demás, inclusive otro tipo de contenido adicional.
+- El motor js podría optimizarse en su organización y reuso de código, así como mejores técnicas para solucionar situaciones, como la instanciación de objetos y llamado de sus operaciones.
+- Correcciones requerida: Rotación al cambiar de ventana y volver puede aparecer con un valor inesperado.
 
 ## Licencia
 
