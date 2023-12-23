@@ -88,12 +88,6 @@ Existen variedad de funcionalidades y disparadores que se entremezclan haciendo 
 	- ON_ANIMATION_START,
 	- ON_ANIMATION_FINISH *no implementado aún*
 
-## Créditos
-
-### Assets:
-
-- <a href="https://www.vecteezy.com/free-vector/hero">Hero Vectors by Vecteezy</a>
-
 ## TO-DO
 
 - Implementar las funcionalidades pendientes que se tienen claramente identificadas.
@@ -109,5 +103,10 @@ Existen variedad de funcionalidades y disparadores que se entremezclan haciendo 
 
 Este código se distribuye bajo licencia GPLv3.
 
+## Créditos
+
+### Assets:
+
+- <a href="https://www.vecteezy.com/free-vector/hero">Hero Vectors by Vecteezy</a>
 
 
