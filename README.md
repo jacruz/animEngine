@@ -8,9 +8,9 @@ La aplicación esta desarrollada en javascript puro que modifica objetos en un e
 
 Aunque no se han realizado pruebas exhaustivas, se ha observado de manera empírica que el motor tiende a alcanzar mejor performance en dispositivos que no cuentan con alta potencia en comparación con otras opciones en internet.
 
-Aquí puedes explorar la [Demo funcional](https://jonnathan-cruz.000webhostapp.com/portfolio/lab/grammar/index.html).
+Aquí puedes explorar la [Demo funcional](https://jonnathan.site/portfolio/lab/grammar/index.html).
 
-Y aquí puedes ver [todo mi portafolio!!!](https://jonnathan-cruz.000webhostapp.com) -> Ready to Roll Out! <img src="assets/images/smart-glasses.png" alt="geek" width="20"/>
+Y aquí puedes ver [todo mi portafolio!!!](https://jonnathan.site) -> Ready to Roll Out! <img src="assets/images/smart-glasses.png" alt="geek" width="20"/>
 
 ## Instalación
 
